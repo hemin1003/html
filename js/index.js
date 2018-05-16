@@ -3,7 +3,7 @@ $(function() {
 		var H = $(window).height(),
 			W = $(window).width();
 		$(".cover").css({"width": W, "height": H});
-		$(".go_rank").click(function() {
+		$(".go_rank,.rank").click(function() {
 			$(".home_page").hide();
 			$(".rank_page").fadeIn(500);
 		});
