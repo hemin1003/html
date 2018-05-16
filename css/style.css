@@ -163,7 +163,7 @@ a:hover{color:#c00; text-decoration:none;}
 /* 首页 */
 .home_page {
 	width: 100%;
-	background: #BD1B20;
+	background: #4082E1;
 }
 		.top_banner img {
 			width: 100%;
@@ -176,7 +176,7 @@ a:hover{color:#c00; text-decoration:none;}
 		top: 56vw;
 		width: 22vw;
 		height: 8vw;
-		background: #C40015;
+		background: #4082E1;
 		border: .5vw solid white;
 		text-align: center;
 		color: white;
@@ -207,7 +207,7 @@ a:hover{color:#c00; text-decoration:none;}
 	.tudi {
 		position: relative;
 		width: 90%;
-		height: 53vw;
+		height: 67vw;
 		background: white;
 		border-radius: 5px;
 		margin: 3.5vw auto;
@@ -241,6 +241,35 @@ a:hover{color:#c00; text-decoration:none;}
 					font-size: 4vw;
 					text-indent: 3vw;
 				}
+		.tudi_study {
+			position: absolute;
+			width: 100%;
+			height: 20%;
+			top: 80%;
+			color: #4B4B4B;
+			text-align: center;
+			background: #E6EDFF;
+			line-height: 60%;
+			border-radius: 0 0 5px 5px;
+		}
+			/*.tudi_action {
+				display: inline-block;
+				width: 100%;
+			}*/
+			.tudi_study img {
+				width: 5%;
+				margin-top: 5%;
+				margin-right: 20%;
+			}
+			.tudi_study span {
+				position: absolute;
+				display: inline-block;
+				font-size: 4vw;
+				top: 42%;
+				left: 8%;
+				right: 0;
+				margin auto: 
+			}
 
 	.rank {
 		position: relative;
@@ -313,7 +342,7 @@ a:hover{color:#c00; text-decoration:none;}
 			}
 			.rank_one .rank_gift {
 				margin-top: 20%;
-				font-size: 5.5vw;
+				font-size: 4.5vw;
 				color: #C32226;
 			}
 			.rank_two .rank_gift {
@@ -325,7 +354,7 @@ a:hover{color:#c00; text-decoration:none;}
 	.go_rank {
 		width: 90%;
 		margin: auto;
-		margin-top: 3%;
+		margin-top: 10%;
 	}
 
 	.award {
@@ -538,7 +567,7 @@ a:hover{color:#c00; text-decoration:none;}
 	.display_block {
 		height: 25vw;
 		width: 100%;
-		background: #BD1B20;
+		background: #4082E1;
 	}
 	/* 底部btn */
 	.footer {
@@ -548,13 +577,13 @@ a:hover{color:#c00; text-decoration:none;}
 		width: 100%;
 		height: 22vw;
 		box-shadow: 1px 1px 4px 4px rgba(16,16,16,.3);
-		background: #C4282C;
+		background: #4082E1;
 	}
 		.footer_btn {
 			float: left;
 			width: 40%;
 			height: 11vw;
-			color: #C11C20;
+			color: #4082E1;
 			text-align: center;
 			line-height: 11vw;
 			margin-left: 6.7%;
@@ -567,16 +596,16 @@ a:hover{color:#c00; text-decoration:none;}
 			background: white;
 		}
 		.footer_right {
-			background: #FFE033;
+			background: #F29F0B;
 		}
 			.footer_right a {
-				color: #C11C20;
+				color: white;
 			}
 
 /* 邀请总榜*/
 .rank_page {
 	width: 100%;
-	background: #BD1B20;
+	background: #416DDD;
 	padding-bottom: 5vw;
 	display: none;
 }
@@ -599,11 +628,12 @@ a:hover{color:#c00; text-decoration:none;}
 			width: 84%;
 			height: 10vw;
 			line-height: 10vw;
-			background: #F6C52E;
+			background: #416DDD;
 			border-radius: 7px;
 			text-align: center;
 			margin: 5vw auto;
 			font-size: 4vw;
+			color: white;
 		}
 		
 		.rank_page_three {
@@ -615,6 +645,10 @@ a:hover{color:#c00; text-decoration:none;}
 				height: 25vw;
 				border-bottom: 1px solid #EEEEEE;
 				line-height: 25vw;
+			}
+			.rank_page_lafite {
+				background: url(../images/list_yunnan_bg.png)no-repeat;
+				background-size: 100%;
 			}
 				.r_page_list_num,.r_page_list_pic,.r_page_list_name {
 					float: left;
@@ -644,7 +678,7 @@ a:hover{color:#c00; text-decoration:none;}
 					font-size: 3.7vw;
 				}
 					.r_duti_num {
-						margin-top: 4vw;
+						margin-top: 9.5vw;
 					}
 					.speical_red {
 						color: red;
@@ -716,7 +750,7 @@ a:hover{color:#c00; text-decoration:none;}
 	.tudi_all {
 		position: relative;
 		width: 100%;
-		background: #BD1B20;
+		background: #416DDD;
 		padding-bottom: 5vw;
 		display: none;
 	}

@@ -25,7 +25,7 @@ $(function() {
 		    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -0+ "rem"}, 500);
 		    return false;
 		});
-		$(".xuan_tudi,.tudi").click(function() {
+		$(".xuan_tudi,.tudi_action").click(function() {
 			$(".home_page").hide();
 			$(".tudi_all").fadeIn(400);
 		});
