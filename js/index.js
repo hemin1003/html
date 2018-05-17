@@ -45,8 +45,8 @@ $(function() {
 	}
 	var uid = getQueryString('uid');
 	var token = getQueryString('token');
-	var uid1 = "12345678";
-	var token1 = "dab522ae-67de-4e52-8c88-b15f4b4445e4";
+	var uid1 = "163252b8d4111iq";
+	var token1 = "cdeb0c6f-0cd0-4bb0-8c75-11118bcb7d20";
 	var hostname = "http://jiayou88.cn";
 	var testname = "http://5ishenma.cn:8084";
 	function Ajaxfn() {
@@ -69,7 +69,6 @@ $(function() {
 		    $(".rank_page_now span").text(now_rank);
 		    $(".rank_page_now font").text(up_rank);
 		    for(var i = 0; i < 3; i++) {
-		    	console.log("66565656");
 		    	var name = res.data.rankingList[i].phoneNum,
 		    		tudi = res.data.rankingList[i].realNewUsers,
 		    		pic = res.data.rankingList[i].wechatHeadImgurl || "images/default_quesiton_icon.png";
@@ -96,6 +95,7 @@ $(function() {
 		$.get(Url2,{"phoneNum": uid,"access_token": token}, function(res){
 			// var Img = res.data.headImgUr || "images/default_list_header_icon.png";
 			// $(".a_mian_pic img").attr("src",Img);
+			console.log(res);
 			$(".cover_num span").text(res.data.remainLotteryTimes);
 			if(res.data.remainLotteryTimes <= 0) {
 			}
@@ -103,7 +103,7 @@ $(function() {
 				use_tudi = res.data.realUserCount,
 				income = res.data.allIncome,
 				indexs,
-				curStep = res.data.curStep;
+				curStep = parseFloat(res.data.curStep);
 			$(".tudi_num1 font").text(invite_tudi);
 			$(".tudi_num2 font").text(use_tudi);
 			$(".tudi_num3 font").text(income);
