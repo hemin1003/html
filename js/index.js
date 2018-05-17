@@ -107,16 +107,17 @@ $(function() {
 			$(".tudi_num1 font").text(invite_tudi);
 			$(".tudi_num2 font").text(use_tudi);
 			$(".tudi_num3 font").text(income);
-
 			$(".a_mian_oder").text(use_tudi);
+			console.log(curStep);
 			for(var i = 0; i < 13; i++) {
 				if($(".lafite_list"+(i+1)+" .aw_con_list_font div span").text() == curStep) {
 					indexs = i;
 				}
 			}
+			console.log(indexs);
 			var all_num = $(".lafite_list"+(indexs+2)+" .aw_tudi font").text() || 2;
 			$(".a_mian_oder2").text(all_num);
-			$(".aw_title_font span").text($(".aw_con_list_font div span").eq(indexs+1).text());
+			$(".aw_title_font span").text($(".lafite_list"+(indexs+1)+" .aw_con_list_font div span").text());
 
 			// 进度条长度
 			var Wid = (use_tudi/all_num)*100;
@@ -176,9 +177,11 @@ $(function() {
 							status2;
 							// console.log(status);
 							if(status == 0) {
-								status2 = "未阅读";
-							}else {
+								status2 = "无效";
+							}else if(status == 1) {
 								status2 = "有效";
+							}else if (status == 2) {
+								status2 = "异常";
 							}
 						$(".tudi_false").before("<tr class='fuck'><td>"+name+"</td><td>"+status2+"</td><td>"+data+"</td></tr>");
 					}
