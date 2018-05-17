@@ -114,12 +114,12 @@ $(function() {
 					indexs = i;
 				}
 			}
-			var all_num = $(".aw_tudi font").eq(indexs+1).text() || 2;
+			var all_num = $(".lafite_list"+(indexs+2)+" .aw_tudi font").text() || 2;
 			$(".a_mian_oder2").text(all_num);
 			$(".aw_title_font span").text($(".aw_con_list_font div span").eq(indexs+1).text());
 
 			// 进度条长度
-			var Wid = (use_tudi/$(".aw_tudi font").eq(indexs+1).text())*100;
+			var Wid = (use_tudi/all_num)*100;
 			if((Wid/100) > 1) {
 				$(".a_mian_fill").css("width","100%");
 			}else {
