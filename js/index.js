@@ -58,7 +58,7 @@ $(function() {
 	var uid = getQueryString('uid');
 	var token = getQueryString('token');
 	var uid1 = "163252b8d4111iq";
-	var token1 = "cdeb0c6f-0cd0-4bb0-8c75-11118bcb7d20";
+	var token1 = "38fe684b-fc4d-43d5-bb01-e342b601313a";
 	var hostname = "http://jiayou88.cn";
 	var testname = "http://5ishenma.cn:8084";
 	function Ajaxfn() {
@@ -88,6 +88,7 @@ $(function() {
 		    	// 排行榜
 		    	$(".rank_list"+(i+1)+" .rank_num").text(tudi);
 		    	$(".rank_list"+(i+1)+" .rank_name").text(name);
+		    	$(".rank_list"+(i+1)+" .rank_pic img").attr("src",pic);
 
 		    	$(".r_page_web_name").eq(i).text(name);
 		    	$(".r_duti_num").eq(i).text(tudi);	
