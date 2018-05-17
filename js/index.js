@@ -3,7 +3,7 @@ $(function() {
 		var H = $(window).height(),
 			W = $(window).width();
 		$(".cover").css({"width": W, "height": H});
-		$(".go_rank").click(function() {
+		$(".go_rank,.rank").click(function() {
 			$(".home_page").hide();
 			$(".rank_page").fadeIn(500);
 		});
@@ -25,7 +25,7 @@ $(function() {
 		    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -0+ "rem"}, 500);
 		    return false;
 		});
-		$(".xuan_tudi,.tudi").click(function() {
+		$(".xuan_tudi,.tudi_action").click(function() {
 			$(".home_page").hide();
 			$(".tudi_all").fadeIn(400);
 		});
@@ -47,10 +47,12 @@ $(function() {
 	var token = getQueryString('token');
 	var uid1 = "12345678";
 	var token1 = "dab522ae-67de-4e52-8c88-b15f4b4445e4";
+	var hostname = "http://jiayou88.cn";
+	var testname = "http://5ishenma.cn:8084";
 	function Ajaxfn() {
-		var Url1 = "http://jiayou88.cn/yfax-htt-api/api/htt/queryHolidayActivityRanking";
-		var Url2 = "http://jiayou88.cn/yfax-htt-api/api/htt/queryHolidayActivityInviteUser";
-		var Url4 = "http://jiayou88.cn/yfax-htt-api/api/htt/queryHolidayActivityStudentList";
+		var Url1 = testname+"/yfax-htt-api/api/htt/queryHolidayActivityRanking";
+		var Url2 = testname+"/yfax-htt-api/api/htt/queryHolidayActivityInviteUser";
+		var Url4 = testname+"/yfax-htt-api/api/htt/queryHolidayActivityStudentList";
 		$.get(Url1,{"phoneNum": uid,"access_token": token},function(res){
 			console.log(res);
 			var now_rank = res.data.userRanking,
@@ -255,7 +257,7 @@ $(function() {
     $('.pointer').click(function (){
     	// 防止多次点击
     	if(bRotate)return;
-    	var Url3 = "http://jiayou88.cn/yfax-htt-api/api/htt/doHolidayActivityLuckyDraw";
+    	var Url3 = testname+"/yfax-htt-api/api/htt/doHolidayActivityLuckyDraw";
     	$.post(Url3,{"phoneNum": uid,"access_token": token},function(res){
 			var times = res.data.remainlotteryTimes,
 				item = res.data.resultCode;
