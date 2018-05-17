@@ -1,4 +1,16 @@
 $(function() {
+	function iphone() {
+		var u = navigator.userAgent;
+		if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+			$(".lafite_phone").attr("href","function://callapp?f=test&title=【有人@我】送您云南双人游要不要？&description=邀请好友看新闻，最高可得18888元，更有机会获得浪漫云南双人游，没套路，信我赶紧去下载领取吧！&image=http://hbhunter.oss-cn-qingdao.aliyuncs.com/yuetoutiao/Material/zd_51.png&link=http://url.cn/5UTcSl0&callback=shareDone");
+		} else if (u.indexOf('iPhone') > -1) {//苹果手机
+			$(".lafite_phone").attr("href","function://callapp?f=showShareView&title=【有人@我】送您云南双人游要不要？&description=邀请好友看新闻，最高可得18888元，更有机会获得浪漫云南双人游，没套路，信我赶紧去下载领取吧！&image=http://hbhunter.oss-cn-qingdao.aliyuncs.com/yuetoutiao/Material/zd_51.png&link=http://url.cn/5UTcSl0&callback=shareDone");
+		} else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+		// alert("winphone手机");
+		// window.location.href = "mobile/index.html";
+		}
+	}
+	iphone();
 	function init() {
 		var H = $(window).height(),
 			W = $(window).width();
