@@ -97,7 +97,6 @@ $(function() {
 
 		    // 排行榜渲染
 		    for(var j = 3; j < 30; j++) {
-
 		    	var name = res.data.rankingList[j].phoneNum,
 		    		tudi = res.data.rankingList[j].realNewUsers;
 		    	$(".r_false").before("<tr><td>"+(j+1)+"</td><td>"+name+"</td><td>"+tudi+"</td></tr>");
@@ -127,10 +126,9 @@ $(function() {
 					indexs = i;
 				}
 			}
-			console.log(indexs);
 			var all_num = $(".lafite_list"+(indexs+2)+" .aw_tudi font").text() || 2;
 			$(".a_mian_oder2").text(all_num);
-			$(".aw_title_font span").text($(".lafite_list"+(indexs+1)+" .aw_con_list_font div span").text());
+			$(".aw_title_font span").text($(".lafite_list"+(indexs+1)+" .aw_con_list_font div span").text() || 0);
 
 			// 进度条长度
 			var Wid = (use_tudi/all_num)*100;
